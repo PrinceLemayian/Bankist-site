@@ -37,35 +37,35 @@ document.addEventListener('keydown', function (e) {
 });
 
 // Smooth scrolling
+//
+// btnScrollTo.addEventListener('click', function (e) {
+//   const s1coords = section1.getBoundingClientRect();
+//   console.log(s1coords);
+//
+//   console.log(e.target.getBoundingClientRect());
 
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect();
-  console.log(s1coords);
+// console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
 
-  console.log(e.target.getBoundingClientRect());
+// console.log(
+//   'height/width viewport',
+//   document.documentElement.clientHeight,
+//   document.documentElement.clientWidth,
+// );
 
-  // console.log('Current scroll (X/Y)', window.pageXOffset, pageYOffset);
+// scrolling
+// window.scrollTo(
+//   s1coords.left + window.pageXOffset,
+//   s1coords.top + window.pageYOffset,
+// );
 
-  // console.log(
-  //   'height/width viewport',
-  //   document.documentElement.clientHeight,
-  //   document.documentElement.clientWidth,
-  // );
+// window.scrollTo({
+//   left: s1coords.left + window.pageXOffset,
+//   top: s1coords.top + window.pageYOffset,
+//   behavior: 'smooth',
+// });
 
-  // scrolling
-  // window.scrollTo(
-  //   s1coords.left + window.pageXOffset,
-  //   s1coords.top + window.pageYOffset,
-  // );
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
-
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
+//   section1.scrollIntoView({ behavior: 'smooth' });
+// });
 
 // Page navigation
 
@@ -281,7 +281,7 @@ const slider = function () {
 
   dotContainer.addEventListener('click', function (e) {
     if (e.target.classList.contains('dots__dot')) {
-      const { slide } = Number(e.target.dataset.slide);
+      const slide = Number(e.target.dataset.slide);
       curSlide = slide;
       goToSlide(slide);
       activateDot(slide);
